@@ -215,8 +215,8 @@ def main():
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
     # long polling
-    app.run_polling(close_loop=False)
 
-
-if __name__ == "__main__":
-    main()
+    if __name__ == "__main__":
+    import asyncio
+    asyncio.run(main())
+    
